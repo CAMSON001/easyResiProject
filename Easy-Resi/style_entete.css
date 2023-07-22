@@ -1,0 +1,1359 @@
+
+@import url('https://fonts.googeapis.com/css?family=Poppins: 200,300,400,500,600,700,800,900&dsplay=swap');
+@import url('https://fonts.googeapis.com/css?family=Poppins: 200,300,400,500,600,700,800,900&dsplay=swap');
+*
+{
+	margin :0 ;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif ;
+}
+:root
+{
+    --blue: #287bff;
+    --white: #fff;
+    --grey:#f5f5f5;
+    --black1 : #222;
+    --black2: #999;
+}
+body
+{
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container_principal
+{
+    position: relative;
+    width: 100% ;
+    min-height: 100vh;
+    background: var(--white);
+    
+}
+.container_principal.active
+{
+    background:black;
+}
+
+/*ceci est l'entete*/
+
+.nav_barre
+{
+    position: sticky;
+    top: 0;
+    width: 100%; 
+    height: 60px;
+    box-shadow: 5px 5px 10px var(--black2) ;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 3;    
+}
+
+
+/*debut du box de navigation 1*/
+.box_nav_1
+{
+    width: 100% ;
+    display: flex;
+    justify-content: space-around;
+    background-color: var(--grey);
+}
+
+
+.sous_box_nav_1
+{
+
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 10px;
+    padding-bottom: 10px;
+    border-bottom:  var(--grey) solid;
+    box-shadow: 0 0 10px  var(--grey);
+   
+}
+.box_logo_recherche
+{
+    width: 300px;
+    position: relative;
+    top: 0;
+    left: 0px;
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+}
+
+.logo0
+{
+    position: relative;
+    width: 160px;
+    margin-top: 20px;
+    padding-left: 15px;
+    padding-top: 4px;
+    padding-right: 4px;
+    cursor: pointer;
+    color: var(--black1);
+}
+
+.logo0 h2
+{
+    color: rgb(27, 139, 231) ;
+}
+
+.recherche
+{
+    width: 50%;
+    position: relative;
+    left: 5%;
+    top: 22px;
+    display: flex;
+}
+.recherche_bouton
+{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+.recherche input
+{
+
+   
+    width: 600px;
+    height: 30px;
+    border: var(--blue) 2px solid;
+    background: var(--white);
+    border-radius: 15px;
+    padding-left: 30px;
+    size: 1em;
+    
+}
+.recherche a
+{
+    position: relative;
+    font-size: 1em;
+    cursor: pointer;
+    color: var(--white);
+}
+.recherche img
+{
+    position: absolute;
+
+}
+.box_notif_utilisateur
+{
+    position: relative;
+    width: 130px;
+    top: 20%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.notifications .image
+{
+    position: relative;
+    top: 5px;
+    left: 4px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+
+}
+.notifications .bouton
+{
+    position: relative;
+    top: 5px;
+    background: rgb(199, 215, 223);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.utilisateur
+{
+    position: relative;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+.utilisateur img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*fin du box de navigation 1*/
+
+
+
+
+/*debut du box de navigation 2*/
+
+.sous_box_nav_2
+{
+    position: fixed;
+    display: flex;
+    top:5px;
+    margin-left: 70%;
+    justify-content: space-around;
+    width: 220px;
+    height: 5%;
+    background-color: var(--grey);
+    z-index: 4;
+   
+}
+.sous_box_nav_2 .bouton
+{
+    position: relative;
+    top: 5px;
+    background: rgb(199, 215, 223);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sous_box_nav_2 .bouton:hover
+{
+    background: rgb(199, 215, 220);
+}
+
+.image_bouton
+{
+    position: relative;
+    top: 1px;
+    left: 0.3px;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* fin du box de navigation 2 */
+
+
+
+
+
+
+/*Notification */
+.notif_box
+{
+    display: none;
+
+}
+.notif_box.active
+{
+    background: #fff;
+    box-shadow: 5px 5px 25px rgb(204, 200, 200);
+    padding: 10px 10px 10px 10px ;
+    width: 300px;
+    height: 505px;
+    border-radius:15px;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    margin-right: 300px; 
+    z-index: 2;   
+}
+.notif_box .flex-div
+{  
+    top: 5px;
+    position: relative;
+    bottom: px;
+    padding: 4px 4px 4px 4px ;
+    border-radius: 15px;
+    height: 90px;
+}
+.notif_box .flex-div:hover
+{
+    background: rgb(238, 227, 227);
+    cursor: pointer;
+}
+
+.notif_box img
+{
+    width: 35px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+.notif_box .info_image
+{
+    color: rgb(13, 142, 228);
+    font-size: 13px;
+}
+.notif_box h3
+{
+    position: sticky;
+    margin-bottom: 10px;
+    top: 0;
+    color: #111;
+    font-size: 1.5em;
+    
+}
+.info_image
+{
+    color: #5a5a5a;
+    font-size: 13px;
+}
+.info_image a
+{
+    color: #000;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+    text-decoration: none;
+}
+
+/* fin Notification */
+
+
+
+/*Debut box utilisateur  */
+.box_utilisateur
+{
+   display: none; 
+}
+
+.box_utilisateur.active
+{
+    padding: 10px 10px 10px 10px ;
+    background: #fff;
+    width: 300px;
+    border-radius:15px;
+    box-shadow: 5px 5px 25px rgb(204, 200, 200);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+     margin-right: 200px; 
+    z-index: 2;   
+}
+.box_utilisateur .box_profile
+{
+    padding: 10px 10px 10px 10px ;
+    background: #fff;
+    border-radius:15px;
+    box-shadow: 5px 5px 25px rgb(204, 200, 200);
+    width: 260px;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.box_utilisateur .box_profile:hover
+{
+    background: rgb(199, 215, 223);
+    cursor: pointer;
+}
+.box_utilisateur a{
+    text-decoration: none;
+    color: black;
+}
+.box_profile img
+{
+    left: 4px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.box_profile h2
+{
+    font-size: 0.8em;
+    margin-left: 10px;
+  
+
+}
+
+
+
+.element_1
+{
+    padding: 10px 10px 10px 10px ;
+    border-radius:15px;
+    width: 260px;
+    margin: auto;
+}
+.element_2
+{
+    padding: 10px 10px 10px 10px ;
+    border-radius:15px;
+    width: 260px;
+    margin: auto;
+}
+.element_1:hover
+{
+    background: var(--black2);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.element_2:hover
+{
+    background: var(--black2);
+    color: var(--white);
+    cursor: pointer;
+}
+
+
+
+/*Contour du mot de passe */
+.contour_1
+{
+    left: 4px;
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    
+}
+.contour_2
+{
+    left: 4px;
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    
+}
+
+
+
+.contour_1 p
+{
+    display: inline;
+    font-size: 0.9em;
+    margin-left: 10px;
+
+}
+.contour_2 p
+{
+    display: inline;
+    font-size: 0.9em;
+    margin-left: 10px;
+
+}
+.element_1 img
+{
+    position: relative;
+    left: 13%;
+    width: 20px;
+    height: 20px;
+    padding: auto;
+    border-radius: 50%;
+    cursor: pointer; 
+    margin-right: 10px;  
+}
+
+.element_2 img
+{
+    position: relative;
+    left: 13%;
+    width: 20px;
+    height: 20px;
+    padding: auto;
+    border-radius: 50%;
+    cursor: pointer; 
+    margin-right: 10px;  
+}
+
+.contour_1 .bouton
+{
+    position: relative;
+    left: 1%;
+    background: rgb(199, 215, 223);
+    width: 50px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contour_1 .bouton:hover
+{
+    background: rgb(199, 215, 220);
+}
+.contour_2 .bouton
+{
+    position: relative;
+    left: 1%;
+    background: rgb(199, 215, 223);
+    width: 50px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contour_2 .bouton:hover
+{
+    background: rgb(199, 215, 220);
+}
+
+
+
+
+
+
+
+/*Contour du parametres */
+.element_2 .contour_2
+{
+    left: 4px;
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    
+}
+
+.contour_2 h3
+{
+    display: inline;
+    font-size: 0.9em;
+    margin-left: 10px;
+
+}
+
+.contour_2 .bouton
+{
+    position: relative;
+    left: 1%;
+    background: rgb(199, 215, 223);
+    width: 50px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contour_2 .bouton:hover
+{
+    background: rgb(199, 215, 220);
+}
+
+
+
+
+/*Utilisateur bouton fonction active */
+
+.compte
+{
+    visibility: hidden;
+    display: none
+   
+}
+.compte.active
+{
+    position: absolute;
+    display: flex;
+    visibility: visible;
+    justify-content: center;
+    align-items: center;
+    top: 53px;
+    right: 0px;
+    left: 60px;
+    width: 75px;
+    height: 28px;
+    background: rgba(14, 10, 10, 0.658);
+    color: var(--white);
+    border-radius: 8px;
+    display: flex;
+    font-size: 0.8em;
+  
+}
+
+
+
+/*Notifications bouton fonction active */
+
+.notificat
+{
+    display: none; 
+}
+
+.notificat.active
+{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 53px;
+    right: 40px;
+    left: 0px;
+    width: 78px;
+    height: 28px;
+    background: rgba(14, 10, 10, 0.658);
+    color: var(--white);
+    border-radius: 8px;
+    display: flex;
+    font-size: 0.8em; 
+
+}
+
+/*debut bouton fonction parametre */
+.fenetre_parametre, .menu_sliders
+{
+     /* display: block;*/
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    padding: 10px 14px;
+    z-index: 6;
+    transition: visibility 0.6s;
+    
+}
+.fenetre_parametre.active, .menu_sliders.active
+{
+   /*display: block;*/
+   visibility: visible;
+    z-index: 6;
+}
+
+.flou, .flouX
+{
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #333333d3;
+    transition: opacity 0.4s 0.01s ease-out;
+    cursor: pointer;
+}
+
+.fenetre_parametre.active .flou, .menu_sliders.active .flouX
+{
+    opacity: 1;
+    transition: opacity 0.4s ease-out;
+}
+
+.modalP
+{
+
+    opacity: 0;
+    width: 95%;
+    max-width: 400px;
+    min-width: 300px;
+    height: 300px;
+    padding: 30px;
+    background: #fff;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, calc(-50% - 50px));
+    transition: opacity 0.4s ease-out,
+    transform 0.4s ease-out;
+   
+}
+
+.fenetre_parametre.active .modalP, .menu_sliders.active .slider
+{
+    opacity: 1;
+    transition: opaciry 0.4s 0.2s ease-out,
+    transform 0.4s 0.009s ease-out;
+    transform: translate(-50%, -50%);
+}
+
+.ferme_modalP
+{
+    padding: 8px 10px ;
+    border: none ;
+    border-radius: 5px;
+    font-size: 18px ;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    background: #ff365e;
+    color: #fff;
+}
+
+.theme
+{
+    width: 100%;
+    position: relative;
+    height: 40px;
+    margin-top: 10%;
+    background: #fff;
+    border-radius:15px;
+    box-shadow: 5px 5px 25px rgb(204, 200, 200);
+    padding: 12px 20px 1px ;
+    
+
+}
+
+.btnBox
+{
+    width: 36px;
+    height: 23px;
+    background: var(--black2);
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    border-radius: 10px;
+    
+}
+.btnBox.active
+{
+    background: rgb(69, 103, 121);
+}
+
+.btnMobile
+{
+    width: 20px;
+    height: 19px;
+    background: rgb(199, 215, 223);
+    position: absolute;
+    top: 1.5px;
+    left: 2px;
+    border-radius: 50%;   
+    box-shadow: 5px 5px 25px rgb(204, 200, 200);;
+}
+
+.btnMobile.active
+{
+    background: var(--black1);
+    position: absolute;
+    top: 1.5px;
+    left: 14px;
+  
+}
+
+.btnMobile:hover
+{
+    cursor: pointer;
+    
+}   
+
+/*1110002*/
+.selecteur
+{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    bottom: 0px;
+    box-shadow: 5px 5px 25px rgb(204, 200, 200);
+    margin-top: 2%;
+    background: #fff;
+    border-radius:15px;
+    box-shadow: 5px 5px 25px rgb(204, 200, 200);
+    padding: 12px 20px 1px ;
+}
+#selectField
+{
+    position: relative;
+    width: 350px;
+    height: 40px;
+    padding: 15px 20px;
+    bottom: 10px;
+    right: 17px;
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer ;
+    border-radius:15px;
+    padding: 12px 20px 1px ;
+    
+}
+#selectField img
+{
+    width: 12px;
+    position: absolute;
+    right: 30px;
+    bottom: 15px;
+    transition: transform 0.5s;
+}
+
+.langage:hover
+{
+    cursor: pointer;
+}
+#list
+{  
+    position: absolute;
+    width: 85%;
+    height: 100px;
+    left: 30px;
+    bottom: 5px;
+    z-index: 7;
+    padding: 12px 20px 1px ;   
+    background: #fff;
+    border-radius:15px;
+    box-shadow: 5px 5px 25px rgb(204, 200, 200);
+    list-style: none;
+    overflow: hidden;
+}
+.hide
+{
+    visibility: hidden;
+}
+
+.rotate{
+    transform: rotate(180deg);
+}
+
+.options
+{
+    width: 100%;
+    height: 25px;
+    background: #fff;
+    border-radius:5px;
+    box-shadow: 5px 5px 25px rgb(204, 200, 200);
+    margin-bottom: 1%;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    padding-left: 3%;
+    padding-top: 1%;
+    list-style: none;
+
+}
+.options:hover
+{
+    background: rgb(199, 215, 223);
+    cursor: pointer;
+}
+
+.apropos
+{
+    width: 100%;
+    position: relative;
+    height: 40px;
+    margin-top: 2%;
+    background: #fff;
+    border-radius:15px;
+    box-shadow: 5px 5px 25px rgb(204, 200, 200);
+    padding-left: 6%;
+    padding-top: 3%;
+}
+
+.apropos:hover
+{
+    cursor: pointer;
+}
+.feneapp
+{
+    visibility:hidden;
+    width: 95%;
+    max-width: 400px;
+    min-width: 300px;
+    height: 300px;
+    padding: 30px;
+    background: #fff;
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.4s ease-out,
+    transform 0.4s ease-out;
+}
+.feneapp.active 
+{
+    visibility:visible;
+}
+
+.ferme_fen
+{
+    padding: 8px 10px ;
+    border: none ;
+    border-radius: 5px;
+    font-size: 18px ;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    background: #ff365e;
+    color: #fff;
+}
+
+.confident
+{
+    width: 100%;
+    position: relative;
+    height: 40px;
+    margin-top: 10%;
+    background: #fff;
+    border-radius:15px;
+    box-shadow: 5px 5px 25px rgb(204, 200, 200);
+    padding: 12px 20px 1px ;
+}
+
+.confident:hover
+{
+    background: rgb(199, 215, 220);
+    cursor: pointer;
+}
+
+.version
+{
+    width: 100%;
+    position: relative;
+    height: 40px;
+    left: 5%;
+    top: 4%;
+}
+/*1110002*/
+
+/*fin bouton fonction parametre */
+
+
+/*111002 */
+/*Fenetre mot de passe */
+
+.fenetre_password
+{
+    display: none;
+    
+}
+
+.fenetre_password.active 
+{
+    position: absolute;
+    margin: auto;
+    width: 30%;
+    height: 30%;
+    border: 1px black solid;
+    z-index: 10;
+}
+
+
+
+.slider
+{
+    display: flex;
+    opacity: 0;
+    width: 400px;
+    max-width: 500px;
+    min-width: 400px;
+    height: 400px;
+    padding: 30px;
+    background: #fff;
+    border-radius: 5px;
+    z-index: 7;
+    box-shadow: 0px 10px 10px 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, calc(-50% - 50px));
+    transition: opacity 0.4s ease-out,
+    transform 0.4s ease-out;
+
+}
+.slider.active
+{
+    opacity: 1;
+}
+
+.slide
+{
+    position: relative;
+    right: 30px;
+    bottom: 8.7%;
+    display: flex;
+    width: 400px;
+    height: 300px;
+    max-width: 600px;
+    min-width: 400px;
+    overflow: hidden;
+    border-radius: 5px;
+    
+}
+.slide img
+{
+    display: none;
+    width: 400px;
+    height: 300px;
+}
+.slide img.active
+{
+    display: block;
+    animation: fade 1s;
+    width: 400px;
+    height: 300px;
+}
+@keyframes fade {
+    from 
+    {
+        opacity: 0;
+    }
+    to 
+    {
+        opacity: 1;
+    }
+    
+}
+.droite
+{
+    position: absolute;
+    left: 90%;
+    top: 50%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255,0));
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius:50%;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    width: 35px;
+    height: 30px;  
+}
+.droite:hover
+{
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255,0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    cursor: pointer;
+}
+.gauche
+{
+    position: absolute;
+    right: 90%;
+    top: 50%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255,0));
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius:50%;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    width: 35px;
+    height: 30px;  
+    padding-left: 10px;
+    padding-top: 5px;
+
+}
+
+.gauche:hover
+{
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255,0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    cursor: pointer;
+}
+
+
+.information_p
+{
+    position: absolute;
+    left: 5px;
+    top: 75%;
+    display: block;
+    align-items: flex-start;
+    margin-top: 7px;
+    width: 400px;
+    height: 100px;
+    max-width: 600px;
+    min-width: 400px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+.information_p img
+{
+    width: 35px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.inform_p
+{
+
+    color: #5a5a5a;
+    font-size: 11px;
+    width: 250px;
+}
+.inform_p a
+{
+    color: #000;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+    text-decoration: none;
+}
+.Reserver_cls
+{
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    padding-top: 5px;
+    padding-left: 5px;
+}
+.redirect
+{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+.what_log, .tel_log
+{
+    width: 35px;
+    height: 35px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255,0));
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.what_log img, .tel_log img
+{
+    width: 100%;
+    height: 100%;
+}
+
+.re_and_re
+{
+    position: absolute;
+    right: 20%;
+    bottom: 10%;
+    display: flex;
+    justify-content: space-between;
+}
+.bouton_retour, .button_reserver
+{
+    width: 90px;
+    height: 30px;
+    border:0,5px var(--white) solid;
+    border-radius : 10px;
+    background: rgba(199, 215, 223, 0.904);
+    cursor: pointer;
+	padding: 2px 10px 2px 10px;
+	color: #333;
+	font-size: 15px;
+	font-weight: 500;
+    margin-left: 20px;
+}
+
+
+
+ 
+
+
+
+/*Fin box utilisateur  */
+
+
+/*111002 */
+
+
+
+
+
+
+
+
+@media(max-width:1300px)
+{
+    .recherche input
+    {
+        width: 600px;
+        
+    }  
+    .sous_box_nav_2
+    {
+        margin-left: 67%;   
+    } 
+    
+
+}
+
+@media(max-width:1200px)
+{
+    .recherche input
+    {
+        width: 500px;
+        
+    }  
+    .sous_box_nav_2
+    {
+        margin-left: 65%;   
+    } 
+    
+          
+}
+@media(max-width:1100px)
+{
+    .recherche input
+    {
+        width: 450px;
+        
+    }  
+    .sous_box_nav_2
+    {
+        margin-left: 63%;   
+    } 
+    
+    
+}
+@media(max-width:1000px)
+{
+    .recherche input
+    {
+        width: 400px;
+        
+    }  
+    .sous_box_nav_2
+    {
+        margin-left: 61%;   
+    } 
+    
+          
+}
+@media(max-width:991px)
+{
+    .recherche input
+    {
+        width: 300px;
+        
+    }  
+    .sous_box_nav_2
+    {
+        margin-left: 56%;   
+    } 
+    
+          
+}
+@media(max-width:900px)
+{
+    .recherche input
+    {
+        width: 250px;
+        
+    }  
+    .sous_box_nav_2
+    {
+        margin-left: 54%;   
+    } 
+    
+          
+}
+@media(max-width:800px)
+{
+ 
+    .recherche input
+    {
+        width: 300px;
+
+    }  
+    .sous_box_nav_2
+    {
+        margin-left: 50%;   
+    } 
+    .sous_box_nav_2
+    {
+        position: sticky;
+        width: 100%;
+        margin: 0;
+        top: 94%;
+        height: 60px;
+        box-shadow: 5px 5px 20px  var(--black2);
+    } 
+    .image_bouton
+    {
+        top: 2px;
+      
+    }
+    
+          
+}
+@media(max-width:800px)
+{
+   
+      
+    .sous_box_nav_2
+    {
+        position: fixed;
+        width: 100%;
+        margin: 0;
+        top: 94%;
+        height: 60px;
+        box-shadow: 5px 5px 30px  var(--black2);
+    } 
+}   
+@media(max-width:768px)
+{
+   
+      
+    .sous_box_nav_2
+    {
+        position: fixed;
+        width: 100%;
+        margin: 0;
+        top: 94%;
+        height: 60px;
+        box-shadow: 5px 5px 30px  var(--black2);
+    } 
+    .image_bouton
+    {
+        top: 2px;
+      
+    }
+    
+          
+}
+@media(max-width:700px)
+{
+    .recherche input
+    {
+        width: 180px;
+        
+    }  
+    .Reserver
+    {
+  
+       left: 70%;
+
+    }
+
+    
+          
+}
+
+
+
+
+
+
+
+
+
+
+

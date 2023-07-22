@@ -1,0 +1,475 @@
+
+@import url('https://fonts.googeapis.com/css?family=Poppins: 200,300,400,500,600,700,800,900&dsplay=swap');
+
+@import url('https://fonts.googeapis.com/css?family=Poppins: 200,300,400,500,600,700,800,900&dsplay=swap');
+*
+{
+	margin :0 ;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif ;
+}
+:root
+{
+    --blue: #287bff;
+    --white: #fff;
+    --grey:#f5f5f5;
+    --black1 : #222;
+    --black2: #999;
+}
+body
+{
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.container_principal
+{
+    position: relative;
+    width: 100% ;
+    min-height: 100vh;
+    background: var(--white);
+    
+}
+
+/*ceci est l'entete*/
+
+.nav_barre
+{
+    position: sticky;
+    top: 0;
+    width: 100%; 
+    display: flex;
+    flex-wrap: wrap;
+   
+    
+}
+
+
+
+
+
+/* debut du box des deux tableau(Favoris & Rescents */
+
+.page_principale
+{
+    z-index: 0;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* debut du box Favoris*/
+.box_favoris
+{
+
+    display: flex;
+    width: 68%;
+    height: 700px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 5%;
+    overflow:scroll;
+    overflow-x: hidden;
+}
+.titre
+{
+    top: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    background:var(--grey);
+    
+
+}
+.titre h3
+{
+    padding-top: 15px;
+    color: var(--blue);
+    font-size: 1.5em;
+}
+.liste_images
+{
+    margin: 4px;
+    padding: 6px 6px 6px 6px;
+}
+
+/*Images du box favoris */
+
+.liste_images .roomd
+{
+    padding-top: 2px;
+    padding-right: 4px;
+    padding-bottom: 4px;
+    width: 350px;
+    height: 250px;
+    border-radius: 15px;
+
+}
+.liste_images .flex-div
+{
+   
+    align-items: flex-start;
+    margin-bottom: 3px;
+
+}
+.liste_images .flex-div img
+{
+    position: relative;
+    width: 35px;
+    margin-right: 10px;
+    border-radius: 50%;
+
+}
+.liste_images .favoris
+{
+    position: relative;
+    top: 1.5px;
+    width: 30px;
+    border-radius: 50%;
+
+
+}
+
+.btn_mod
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--white);
+    bottom: 60px;
+    left: 5px;
+}
+.btn_mod:hover
+{
+    background: var(--black2);
+}
+.btn_mod button
+{
+    display: flex;
+    width: 90px;
+    height: 35px;
+    border:0,5px var(--white) solid;
+    border-radius : 10px;
+    background: var(--blue);
+    cursor: pointer;
+	padding: 10px 20px 10px;
+	color: #fff;
+	font-size: 16px;
+	font-weight: 500;
+}
+.btn_mod button:hover
+{
+    background: var(--grey);
+    width: 100px;
+    color: var(--blue);
+}
+/* fin du box Favoris */
+
+
+
+/* debut du Rescents*/
+.box_rescent
+{
+    position: relative;
+    display: flex;
+    width: 35%;
+    height: 700px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-right: 2px;
+    margin-top: 5%;
+    overflow:scroll;
+    overflow-x: hidden;
+    
+}
+.Reserver_r
+{
+    position: relative;
+    bottom: 30px;
+    left: 70%;
+    padding: auto;
+}
+.Reserver_r button
+{
+    width: 90px;
+    height: 20px;
+    border:0,5px var(--white) solid;
+    border-radius : 5px;
+    background: var(--blue);
+    cursor: pointer;
+    padding: auto;
+	color: #fff;
+	font-size: 15px;
+	font-weight: 500;
+}
+.Reserver_r button:hover
+{
+    background: var(--black2);
+    font-size: 14px;
+  
+}
+
+/*Images du box rescent*/
+.liste_images .room
+{
+    
+    padding-top: 2px;
+    padding-right: 4px;
+    padding-bottom: 4px;
+    width: 400px;
+    border-radius: 5%;
+
+}
+
+.box_info 
+{
+    display: flex;
+
+}
+
+.info_image
+{
+    color: #5a5a5a;
+    font-size: 13px;
+}
+.info_image a
+{
+    color: #000;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+@media(max-width:1300px)
+{
+    .box_favoris
+    {
+
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+    .liste_images .roomd
+    {
+        padding-top: 2px;
+        padding-right: 1;
+        padding-bottom: 4px;
+        width: 300px;
+        height: 200px;
+        border-radius: 15px;
+
+    }
+    .box_rescent
+    {
+        margin-right: 5px;
+
+    }
+ 
+    
+
+}
+
+@media(max-width:1200px)
+{
+
+    .liste_images .room
+    {
+        padding-right: 1;
+        width: 300px;
+        height: 200px;
+ 
+
+    }
+ 
+    
+
+}
+@media(max-width:991px)
+{
+
+    .liste_images .roomd
+    {
+        padding-top: 2px;
+        padding-right: 1;
+        padding-bottom: 4px;
+        width: 270px;
+        height: 170px;
+  
+
+    }
+    .titre
+    {
+        height: 40px;
+        
+    }
+    .titre h3
+    {
+        padding-top: 10px;
+        color: var(--blue);
+        font-size: 1.4em;
+    }
+ 
+    
+
+}
+
+
+@media(max-width:900px)
+{
+
+    .liste_images .room
+    {
+        padding-top: 2px;
+        padding-right: 1;
+        padding-bottom: 4px;
+        width: 260px;
+        height: 160px;
+  
+
+    }
+    .liste_images .roomd
+    {
+        padding-top: 2px;
+        padding-right: 1;
+        padding-bottom: 4px;
+        width: 250px;
+        height: 150px;
+  
+
+    }
+    .info_image
+    {
+        color: #5a5a5a;
+        font-size: 12px;
+    }
+    .info_image a
+    {
+        color: #000;
+        font-weight: 600;
+        display: block;
+        margin-bottom: 5px;
+        text-decoration: none;
+    }
+    .Reserver_r button
+    {
+        width: 80px;
+        height: 18px;
+        border-radius : 4px;
+        color: #fff;
+        font-size: 12px;
+        
+    }
+    .Reserver_r button:hover
+    {
+        background: var(--black2);
+        font-size: 10px;
+    
+    }
+    
+}
+
+@media(max-width:832px)
+{
+
+   .box_rescent
+   {
+       display: none;
+   }
+   
+   .box_favoris
+   {
+       width: 100%;
+   }
+   .liste_images .roomd
+   {
+       padding-top: 2px;
+       padding-right: 1;
+       padding-bottom: 4px;
+       width: 280px;
+       height: 180px;
+ 
+
+   }
+
+   .box_favoris
+   {
+       margin-top: 6%;
+   }
+    
+
+}
+@media(max-width:800px)
+{
+
+   
+   .liste_images .roomd
+   {
+       padding-top: 2px;
+       padding-right: 1px;
+       padding-bottom: 4px;
+       width: 300px;
+       height: 200px;
+ 
+
+   }
+    
+}
+
+@media(max-width:768px)
+{
+
+   
+   
+   .liste_images .roomd
+   {
+       padding-top: 2px;
+       padding-right: 1;
+       padding-bottom: 4px;
+       width: 100%;
+       height: 200px;
+ 
+
+   }
+    
+
+}
+
+@media(max-width:700px)
+{
+
+   
+   .liste_images .roomd
+   {
+       padding-top: 2px;
+       padding-right: 1;
+       padding-bottom: 4px;
+       width: 100%;
+       height: 300px;
+ 
+
+   }
+    
+
+}
+
+
+
+
+
+
+
